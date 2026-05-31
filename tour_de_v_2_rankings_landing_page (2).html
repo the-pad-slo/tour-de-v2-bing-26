@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -667,139 +668,80 @@
   </main>
 
   <script>
-    const participantsCsv = `bib,name,category,location,routes_completed,time
-91,Sean D,Intermediate (V4–V6),Binghamton,30,7:48
-107,Owen R,Advanced (V7+),Binghamton,30,8:12
-34,Hoppe,Intermediate (V4–V6),Binghamton,30,9:24
-95,Roger K,Advanced (V7+),Binghamton,30,11:22
-113,Thomas K,Advanced (V7+),Binghamton,30,11:38
-21,Gadiel R,Intermediate (V4–V6),Binghamton,30,12:37
-109,Jonah,Beginner (V0–V3),Binghamton,30,14:07
-54,Jim,Intermediate (V4–V6),Binghamton,30,14:18
-89,Jake S,Intermediate (V4–V6),Binghamton,30,14:27
-24,Kyle S,Intermediate (V4–V6),Binghamton,30,14:30
-41,Nathan M,Intermediate (V4–V6),Binghamton,30,15:09
-31,Jonathan W,Intermediate (V4–V6),Binghamton,30,15:18
-2,Taylor H,Intermediate (V4–V6),Binghamton,30,15:22
-88,Vincent M,Intermediate (V4–V6),Binghamton,30,15:32
-59,Sue,Advanced (V7+),Binghamton,30,16:25
-39,Taylor,Intermediate (V4–V6),Binghamton,30,17:00
-8,Cole H,Intermediate (V4–V6),Binghamton,30,17:05
-92,Tishia D,Beginner (V0–V3),Binghamton,30,17:06
-1,Caleb M,Intermediate (V4–V6),Binghamton,30,17:29
-111,John S,Intermediate (V4–V6),Binghamton,30,17:32
-14,Brandon O,Intermediate (V4–V6),Binghamton,30,17:44
-81,Nate B,Intermediate (V4–V6),Binghamton,30,17:50
-37,Gunner G,Beginner (V0–V3),Binghamton,30,18:04
-18,Mike D,Intermediate (V4–V6),Binghamton,30,18:17
-36,Eric G,Beginner (V0–V3),Binghamton,30,18:31
-104,Sebastian K,Intermediate (V4–V6),Binghamton,30,18:36
-63,Dylan,Beginner (V0–V3),Binghamton,30,19:01
-17,Parker S,Beginner (V0–V3),Binghamton,30,19:19
-100,Pavel M,Beginner (V0–V3),Binghamton,30,19:47
-60,Amir,Beginner (V0–V3),Binghamton,30,20:16
-5,Cody B,Beginner (V0–V3),Binghamton,30,20:40
-6,Rachel B,Beginner (V0–V3),Binghamton,30,20:44
-26,Joe F,Intermediate (V4–V6),Binghamton,30,20:44
-96,Gavin V,Beginner (V0–V3),Binghamton,30,21:58
-112,Shalin,Intermediate (V4–V6),Binghamton,30,22:14
-64,Nathan,Beginner (V0–V3),Binghamton,30,22:20
-3,Kabeen S,Beginner (V0–V3),Binghamton,30,23:50
-61,Jennifer,Beginner (V0–V3),Binghamton,30,24:25
-46,Michael,Beginner (V0–V3),Binghamton,30,25:02
-102,Henry T,Intermediate (V4–V6),Binghamton,30,25:55
-62,Caleb,Beginner (V0–V3),Binghamton,30,27:10
-42,Basil,Beginner (V0–V3),Binghamton,30,27:11
-76,Haley S,Beginner (V0–V3),Binghamton,30,27:18
-105,Tenzing L,Beginner (V0–V3),Binghamton,30,27:26
-13,Ralph P,Beginner (V0–V3),Binghamton,30,29:30
-67,Cameron,Beginner (V0–V3),Binghamton,30,29:31
-83,Vinessa A,Beginner (V0–V3),Binghamton,30,30:00
-85,Harry K,Beginner (V0–V3),Binghamton,30,30:00
-7,Jason O,Beginner (V0–V3),Binghamton,30,30:00
-71,Robert K,Intermediate (V4–V6),Binghamton,30,30:00
-75,Adnan M,Intermediate (V4–V6),Binghamton,30,30:00
-43,Shaun H,Beginner (V0–V3),Binghamton,29,30:00
-110,Alexis F,Beginner (V0–V3),Binghamton,29,30:00
-20,Abdull A,Intermediate (V4–V6),Binghamton,28,27:36
-90,Emily M,Beginner (V0–V3),Binghamton,28,29:51
-94,Colin H,Beginner (V0–V3),Binghamton,28,30:00
-56,Elijah,Beginner (V0–V3),Binghamton,28,30:00
-86,Joshua M,Beginner (V0–V3),Binghamton,27,23:44
-22,Jenya S,Beginner (V0–V3),Binghamton,27,27:41
-115,Chrisanna S,Beginner (V0–V3),Binghamton,27,30:00
-28,Ian T,Beginner (V0–V3),Binghamton,26,28:19
-38,Aranka H,Beginner (V0–V3),Binghamton,26,28:37
-114,Charles K,Beginner (V0–V3),Binghamton,26,29:16
-15,Raisa C,Beginner (V0–V3),Binghamton,26,30:00
-84,Carolyn K,Beginner (V0–V3),Binghamton,26,30:00
-29,Alicia M,Beginner (V0–V3),Binghamton,26,30:00
-33,Victoria S,Beginner (V0–V3),Binghamton,26,30:00
-101,Rohan B,Beginner (V0–V3),Binghamton,26,30:00
-58,Brently,Beginner (V0–V3),Binghamton,26,30:00
-78,Anthony M,Beginner (V0–V3),Binghamton,24,29:05
-79,Raquel S,Beginner (V0–V3),Binghamton,24,30:00
-57,Shawn,Beginner (V0–V3),Binghamton,24,30:00
-106,Cyrus C,Beginner (V0–V3),Binghamton,24,30:00
-77,Jared A,Beginner (V0–V3),Binghamton,24,30:00
-10,Laura K,Beginner (V0–V3),Binghamton,23,21:43
-19,Ryan C,Intermediate (V4–V6),Binghamton,23,25:46
-53,Larry,Beginner (V0–V3),Binghamton,23,29:38
-11,Robert S,Beginner (V0–V3),Binghamton,23,30:00
-48,James,Beginner (V0–V3),Binghamton,23,30:00
-50,Genevieve,Beginner (V0–V3),Binghamton,23,30:00
-87,Angelina C,Beginner (V0–V3),Binghamton,22,23:29
-27,Will L,Beginner (V0–V3),Binghamton,22,28:27
-30,Andrew E,Beginner (V0–V3),Binghamton,22,28:52
-82,Davit G,Beginner (V0–V3),Binghamton,22,30:00
-103,Mackenzie J,Beginner (V0–V3),Binghamton,22,30:00
-70,Zavien,Beginner (V0–V3),Binghamton,21,29:57
-16,Alyssa S,Beginner (V0–V3),Binghamton,21,30:00
-40,Rae L,Beginner (V0–V3),Binghamton,21,30:00
-25,Katarina F,Beginner (V0–V3),Binghamton,20,28:37
-12,William B,Beginner (V0–V3),Binghamton,20,30:00
-44,Elizabth,Beginner (V0–V3),Binghamton,20,30:00
-51,James,Beginner (V0–V3),Binghamton,20,30:00
-55,Aiden,Beginner (V0–V3),Binghamton,20,30:00
-35,Carlos W,Beginner (V0–V3),Binghamton,19,21:47
-80,Fajer L,Beginner (V0–V3),Binghamton,18,14:55
-93,Jackson A,Beginner (V0–V3),Binghamton,18,18:25
-45,Charlitte,Beginner (V0–V3),Binghamton,18,30:00
-73,River K,Beginner (V0–V3),Binghamton,18,30:00
-65,Eve,Beginner (V0–V3),Binghamton,17,30:00
-69,Zach,Beginner (V0–V3),Binghamton,17,30:00
-32,Aleck H,Beginner (V0–V3),Binghamton,16,29:06
-9,Samuel H,Intermediate (V4–V6),Binghamton,16,30:00
-23,Nikolai,Beginner (V0–V3),Binghamton,16,30:00
-68,Roberta,Intermediate (V4–V6),Binghamton,14,14:57
-98,Ian A,Beginner (V0–V3),Binghamton,14,26:50
-49,Hugo,Beginner (V0–V3),Binghamton,14,30:00
-108,Andrew,Beginner (V0–V3),Binghamton,14,30:00
-97,Carla V,Beginner (V0–V3),Binghamton,12,29:47
-52,Zach,Beginner (V0–V3),Binghamton,12,30:00
-66,Kaylee,Beginner (V0–V3),Binghamton,12,30:00
-47,Joshua,Beginner (V0–V3),Binghamton,9,26:59`;
-
-    const rawParticipants = participantsCsv
-      .trim()
-      .split(/
-?
-/)
-      .slice(1)
-      .filter(Boolean)
-      .map((line) => {
-        const [bib, name, category, location, routesCompleted, time] = line.split(",");
-        return {
-          bib: Number(bib),
-          name: name.trim(),
-          category: category.trim(),
-          location: location.trim(),
-          routesCompleted: Number(routesCompleted),
-          time: time.trim()
-        };
-      });
-
-    const MAX_ROUTES = 30;
+    const participantsTsv = `bib	name	category	location	routes_completed	time
+91	Sean D	Intermediate (V4–V6)	Binghamton	30	7:48
+107	Owen R	Advanced (V7+)	Binghamton	30	8:12
+34	Hoppe	Intermediate (V4–V6)	Binghamton	30	9:24
+95	Roger K	Advanced (V7+)	Binghamton	30	11:22
+113	Thomas K	Advanced (V7+)	Binghamton	30	11:38
+21	Gadiel R	Intermediate (V4–V6)	Binghamton	30	12:37
+109	Jonah	Beginner (V0–V3)	Binghamton	30	14:07
+54	Jim	Intermediate (V4–V6)	Binghamton	30	14:18
+89	Jake S	Intermediate (V4–V6)	Binghamton	30	14:27
+24	Kyle S	Intermediate (V4–V6)	Binghamton	30	14:30
+41	Nathan M	Intermediate (V4–V6)	Binghamton	30	15:09
+31	Jonathan W	Intermediate (V4–V6)	Binghamton	30	15:18
+2	Taylor H	Intermediate (V4–V6)	Binghamton	30	15:22
+88	Vincent M	Intermediate (V4–V6)	Binghamton	30	15:32
+59	Sue	Advanced (V7+)	Binghamton	30	16:25
+39	Taylor	Intermediate (V4–V6)	Binghamton	30	17:00
+8	Cole H	Intermediate (V4–V6)	Binghamton	30	17:05
+92	Tishia D	Beginner (V0–V3)	Binghamton	30	17:06
+1	Caleb M	Intermediate (V4–V6)	Binghamton	30	17:29
+111	John S	Intermediate (V4–V6)	Binghamton	30	17:32
+14	Brandon O	Intermediate (V4–V6)	Binghamton	30	17:44
+81	Nate B	Intermediate (V4–V6)	Binghamton	30	17:50
+37	Gunner G	Beginner (V0–V3)	Binghamton	30	18:04
+18	Mike D	Intermediate (V4–V6)	Binghamton	30	18:17
+36	Eric G	Beginner (V0–V3)	Binghamton	30	18:31
+104	Sebastian K	Intermediate (V4–V6)	Binghamton	30	18:36
+63	Dylan	Beginner (V0–V3)	Binghamton	30	19:01
+17	Parker S	Beginner (V0–V3)	Binghamton	30	19:19
+100	Pavel M	Beginner (V0–V3)	Binghamton	30	19:47
+60	Amir	Beginner (V0–V3)	Binghamton	30	20:16
+5	Cody B	Beginner (V0–V3)	Binghamton	30	20:40
+6	Rachel B	Beginner (V0–V3)	Binghamton	30	20:44
+26	Joe F	Intermediate (V4–V6)	Binghamton	30	20:44
+96	Gavin V	Beginner (V0–V3)	Binghamton	30	21:58
+112	Shalin	Intermediate (V4–V6)	Binghamton	30	22:14
+64	Nathan	Beginner (V0–V3)	Binghamton	30	22:20
+3	Kabeen S	Beginner (V0–V3)	Binghamton	30	23:50
+61	Jennifer	Beginner (V0–V3)	Binghamton	30	24:25:00
+46	Michael	Beginner (V0–V3)	Binghamton	30	25:02:00
+102	Henry T	Intermediate (V4–V6)	Binghamton	30	25:55:00
+62	Caleb	Beginner (V0–V3)	Binghamton	30	27:10:00
+42	Basil	Beginner (V0–V3)	Binghamton	30	27:11:00
+76	Haley S	Beginner (V0–V3)	Binghamton	30	27:18:00
+105	Tenzing L	Beginner (V0–V3)	Binghamton	30	27:26:00
+13	Ralph P	Beginner (V0–V3)	Binghamton	30	29:30:00
+67	Cameron	Beginner (V0–V3)	Binghamton	30	29:31:00
+83	Vinessa A	Beginner (V0–V3)	Binghamton	30	30:00:00
+85	Harry K	Beginner (V0–V3)	Binghamton	30	30:00:00
+7	Jason O	Beginner (V0–V3)	Binghamton	30	30:00:00
+71	Robert K	Intermediate (V4–V6)	Binghamton	30	30:00:00
+75	Adnan M	Intermediate (V4–V6)	Binghamton	30	30:00:00
+43	Shaun H	Beginner (V0–V3)	Binghamton	29	30:00:00
+110	Alexis F	Beginner (V0–V3)	Binghamton	29	30:00:00
+20	Abdull A	Intermediate (V4–V6)	Binghamton	28	27:36:00
+90	Emily M	Beginner (V0–V3)	Binghamton	28	29:51:00
+94	Colin H	Beginner (V0–V3)	Binghamton	28	30:00:00
+56	Elijah	Beginner (V0–V3)	Binghamton	28	30:00:00
+86	Joshua M	Beginner (V0–V3)	Binghamton	27	23:44
+22	Jenya S	Beginner (V0–V3)	Binghamton	27	27:41:00
+115	Chrisanna S	Beginner (V0–V3)	Binghamton	27	30:00:00
+28	Ian T	Beginner (V0–V3)	Binghamton	26	28:19:00
+38	Aranka H	Beginner (V0–V3)	Binghamton	26	28:37:00
+114	Charles K	Beginner (V0–V3)	Binghamton	26	29:16:00
+15	Raisa C	Beginner (V0–V3)	Binghamton	26	30:00:00
+84	Carolyn K	Beginner (V0–V3)	Binghamton	26	30:00:00
+29	Alicia M	Beginner (V0–V3)	Binghamton	26	30:00:00
+33	Victoria S	Beginner (V0–V3)	Binghamton	26	30:00:00
+101	Rohan B	Beginner (V0–V3)	Binghamton	26	30:00:00
+58	Brently	Beginner (V0–V3)	Binghamton	26	30:00:00
+78	Anthony M	Beginner (V0–V3)	Binghamton	24	29:05:00
+79	Raquel S	Beginner (V0–V3)	Binghamton	24	30:00:00
+57	Shawn	Beginner (V0–V3)	Binghamton	24	30:00:00
+106	Cyrus C	Beginner (V0–V3)	Binghamton
 
     const parseTimeToSeconds = (value) => {
       const parts = String(value).split(":").map(Number);
