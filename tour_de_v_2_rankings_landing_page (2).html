@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -667,80 +668,121 @@
   </main>
 
   <script>
-    const participantsTsv = `bib	name	category	location	routes_completed	time
-91	Sean D	Intermediate (V4–V6)	Binghamton	30	7:48
-107	Owen R	Advanced (V7+)	Binghamton	30	8:12
-34	Hoppe	Intermediate (V4–V6)	Binghamton	30	9:24
-95	Roger K	Advanced (V7+)	Binghamton	30	11:22
-113	Thomas K	Advanced (V7+)	Binghamton	30	11:38
-21	Gadiel R	Intermediate (V4–V6)	Binghamton	30	12:37
-109	Jonah	Beginner (V0–V3)	Binghamton	30	14:07
-54	Jim	Intermediate (V4–V6)	Binghamton	30	14:18
-89	Jake S	Intermediate (V4–V6)	Binghamton	30	14:27
-24	Kyle S	Intermediate (V4–V6)	Binghamton	30	14:30
-41	Nathan M	Intermediate (V4–V6)	Binghamton	30	15:09
-31	Jonathan W	Intermediate (V4–V6)	Binghamton	30	15:18
-2	Taylor H	Intermediate (V4–V6)	Binghamton	30	15:22
-88	Vincent M	Intermediate (V4–V6)	Binghamton	30	15:32
-59	Sue	Advanced (V7+)	Binghamton	30	16:25
-39	Taylor	Intermediate (V4–V6)	Binghamton	30	17:00
-8	Cole H	Intermediate (V4–V6)	Binghamton	30	17:05
-92	Tishia D	Beginner (V0–V3)	Binghamton	30	17:06
-1	Caleb M	Intermediate (V4–V6)	Binghamton	30	17:29
-111	John S	Intermediate (V4–V6)	Binghamton	30	17:32
-14	Brandon O	Intermediate (V4–V6)	Binghamton	30	17:44
-81	Nate B	Intermediate (V4–V6)	Binghamton	30	17:50
-37	Gunner G	Beginner (V0–V3)	Binghamton	30	18:04
-18	Mike D	Intermediate (V4–V6)	Binghamton	30	18:17
-36	Eric G	Beginner (V0–V3)	Binghamton	30	18:31
-104	Sebastian K	Intermediate (V4–V6)	Binghamton	30	18:36
-63	Dylan	Beginner (V0–V3)	Binghamton	30	19:01
-17	Parker S	Beginner (V0–V3)	Binghamton	30	19:19
-100	Pavel M	Beginner (V0–V3)	Binghamton	30	19:47
-60	Amir	Beginner (V0–V3)	Binghamton	30	20:16
-5	Cody B	Beginner (V0–V3)	Binghamton	30	20:40
-6	Rachel B	Beginner (V0–V3)	Binghamton	30	20:44
-26	Joe F	Intermediate (V4–V6)	Binghamton	30	20:44
-96	Gavin V	Beginner (V0–V3)	Binghamton	30	21:58
-112	Shalin	Intermediate (V4–V6)	Binghamton	30	22:14
-64	Nathan	Beginner (V0–V3)	Binghamton	30	22:20
-3	Kabeen S	Beginner (V0–V3)	Binghamton	30	23:50
-61	Jennifer	Beginner (V0–V3)	Binghamton	30	24:25:00
-46	Michael	Beginner (V0–V3)	Binghamton	30	25:02:00
-102	Henry T	Intermediate (V4–V6)	Binghamton	30	25:55:00
-62	Caleb	Beginner (V0–V3)	Binghamton	30	27:10:00
-42	Basil	Beginner (V0–V3)	Binghamton	30	27:11:00
-76	Haley S	Beginner (V0–V3)	Binghamton	30	27:18:00
-105	Tenzing L	Beginner (V0–V3)	Binghamton	30	27:26:00
-13	Ralph P	Beginner (V0–V3)	Binghamton	30	29:30:00
-67	Cameron	Beginner (V0–V3)	Binghamton	30	29:31:00
-83	Vinessa A	Beginner (V0–V3)	Binghamton	30	30:00:00
-85	Harry K	Beginner (V0–V3)	Binghamton	30	30:00:00
-7	Jason O	Beginner (V0–V3)	Binghamton	30	30:00:00
-71	Robert K	Intermediate (V4–V6)	Binghamton	30	30:00:00
-75	Adnan M	Intermediate (V4–V6)	Binghamton	30	30:00:00
-43	Shaun H	Beginner (V0–V3)	Binghamton	29	30:00:00
-110	Alexis F	Beginner (V0–V3)	Binghamton	29	30:00:00
-20	Abdull A	Intermediate (V4–V6)	Binghamton	28	27:36:00
-90	Emily M	Beginner (V0–V3)	Binghamton	28	29:51:00
-94	Colin H	Beginner (V0–V3)	Binghamton	28	30:00:00
-56	Elijah	Beginner (V0–V3)	Binghamton	28	30:00:00
-86	Joshua M	Beginner (V0–V3)	Binghamton	27	23:44
-22	Jenya S	Beginner (V0–V3)	Binghamton	27	27:41:00
-115	Chrisanna S	Beginner (V0–V3)	Binghamton	27	30:00:00
-28	Ian T	Beginner (V0–V3)	Binghamton	26	28:19:00
-38	Aranka H	Beginner (V0–V3)	Binghamton	26	28:37:00
-114	Charles K	Beginner (V0–V3)	Binghamton	26	29:16:00
-15	Raisa C	Beginner (V0–V3)	Binghamton	26	30:00:00
-84	Carolyn K	Beginner (V0–V3)	Binghamton	26	30:00:00
-29	Alicia M	Beginner (V0–V3)	Binghamton	26	30:00:00
-33	Victoria S	Beginner (V0–V3)	Binghamton	26	30:00:00
-101	Rohan B	Beginner (V0–V3)	Binghamton	26	30:00:00
-58	Brently	Beginner (V0–V3)	Binghamton	26	30:00:00
-78	Anthony M	Beginner (V0–V3)	Binghamton	24	29:05:00
-79	Raquel S	Beginner (V0–V3)	Binghamton	24	30:00:00
-57	Shawn	Beginner (V0–V3)	Binghamton	24	30:00:00
-106	Cyrus C	Beginner (V0–V3)	Binghamton
+    const rawParticipants = [
+      { bib: 91, name: "Sean D", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "7:48" },
+      { bib: 107, name: "Owen R", category: "Advanced (V7+)", location: "Binghamton", routesCompleted: 30, time: "8:12" },
+      { bib: 34, name: "Hoppe", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "9:24" },
+      { bib: 95, name: "Roger K", category: "Advanced (V7+)", location: "Binghamton", routesCompleted: 30, time: "11:22" },
+      { bib: 113, name: "Thomas K", category: "Advanced (V7+)", location: "Binghamton", routesCompleted: 30, time: "11:38" },
+      { bib: 21, name: "Gadiel R", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "12:37" },
+      { bib: 109, name: "Jonah", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "14:07" },
+      { bib: 54, name: "Jim", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "14:18" },
+      { bib: 89, name: "Jake S", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "14:27" },
+      { bib: 24, name: "Kyle S", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "14:30" },
+      { bib: 41, name: "Nathan M", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "15:09" },
+      { bib: 31, name: "Jonathan W", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "15:18" },
+      { bib: 2, name: "Taylor H", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "15:22" },
+      { bib: 88, name: "Vincent M", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "15:32" },
+      { bib: 59, name: "Sue", category: "Advanced (V7+)", location: "Binghamton", routesCompleted: 30, time: "16:25" },
+      { bib: 39, name: "Taylor", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "17:00" },
+      { bib: 8, name: "Cole H", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "17:05" },
+      { bib: 92, name: "Tishia D", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "17:06" },
+      { bib: 1, name: "Caleb M", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "17:29" },
+      { bib: 111, name: "John S", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "17:32" },
+      { bib: 14, name: "Brandon O", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "17:44" },
+      { bib: 81, name: "Nate B", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "17:50" },
+      { bib: 37, name: "Gunner G", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "18:04" },
+      { bib: 18, name: "Mike D", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "18:17" },
+      { bib: 36, name: "Eric G", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "18:31" },
+      { bib: 104, name: "Sebastian K", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "18:36" },
+      { bib: 63, name: "Dylan", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "19:01" },
+      { bib: 17, name: "Parker S", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "19:19" },
+      { bib: 100, name: "Pavel M", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "19:47" },
+      { bib: 60, name: "Amir", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "20:16" },
+      { bib: 5, name: "Cody B", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "20:40" },
+      { bib: 6, name: "Rachel B", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "20:44" },
+      { bib: 26, name: "Joe F", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "20:44" },
+      { bib: 96, name: "Gavin V", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "21:58" },
+      { bib: 112, name: "Shalin", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "22:14" },
+      { bib: 64, name: "Nathan", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "22:20" },
+      { bib: 3, name: "Kabeen S", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "23:50" },
+      { bib: 61, name: "Jennifer", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "24:25:00" },
+      { bib: 46, name: "Michael", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "25:02:00" },
+      { bib: 102, name: "Henry T", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "25:55:00" },
+      { bib: 62, name: "Caleb", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "27:10:00" },
+      { bib: 42, name: "Basil", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "27:11:00" },
+      { bib: 76, name: "Haley S", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "27:18:00" },
+      { bib: 105, name: "Tenzing L", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "27:26:00" },
+      { bib: 13, name: "Ralph P", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "29:30:00" },
+      { bib: 67, name: "Cameron", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "29:31:00" },
+      { bib: 83, name: "Vinessa A", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "30:00:00" },
+      { bib: 85, name: "Harry K", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "30:00:00" },
+      { bib: 7, name: "Jason O", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 30, time: "30:00:00" },
+      { bib: 71, name: "Robert K", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "30:00:00" },
+      { bib: 75, name: "Adnan M", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 30, time: "30:00:00" },
+      { bib: 43, name: "Shaun H", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 29, time: "30:00:00" },
+      { bib: 110, name: "Alexis F", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 29, time: "30:00:00" },
+      { bib: 20, name: "Abdull A", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 28, time: "27:36:00" },
+      { bib: 90, name: "Emily M", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 28, time: "29:51:00" },
+      { bib: 94, name: "Colin H", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 28, time: "30:00:00" },
+      { bib: 56, name: "Elijah", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 28, time: "30:00:00" },
+      { bib: 86, name: "Joshua M", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 27, time: "23:44" },
+      { bib: 22, name: "Jenya S", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 27, time: "27:41:00" },
+      { bib: 115, name: "Chrisanna S", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 27, time: "30:00:00" },
+      { bib: 28, name: "Ian T", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 26, time: "28:19:00" },
+      { bib: 38, name: "Aranka H", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 26, time: "28:37:00" },
+      { bib: 114, name: "Charles K", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 26, time: "29:16:00" },
+      { bib: 15, name: "Raisa C", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 26, time: "30:00:00" },
+      { bib: 84, name: "Carolyn K", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 26, time: "30:00:00" },
+      { bib: 29, name: "Alicia M", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 26, time: "30:00:00" },
+      { bib: 33, name: "Victoria S", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 26, time: "30:00:00" },
+      { bib: 101, name: "Rohan B", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 26, time: "30:00:00" },
+      { bib: 58, name: "Brently", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 26, time: "30:00:00" },
+      { bib: 78, name: "Anthony M", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 24, time: "29:05:00" },
+      { bib: 79, name: "Raquel S", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 24, time: "30:00:00" },
+      { bib: 57, name: "Shawn", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 24, time: "30:00:00" },
+      { bib: 106, name: "Cyrus C", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 24, time: "30:00:00" },
+      { bib: 77, name: "Jared A", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 24, time: "30:00:00" },
+      { bib: 10, name: "Laura K", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 23, time: "21:43" },
+      { bib: 19, name: "Ryan C", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 23, time: "25:46:00" },
+      { bib: 53, name: "Larry", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 23, time: "29:38:00" },
+      { bib: 11, name: "Robert S", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 23, time: "30:00:00" },
+      { bib: 48, name: "James", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 23, time: "30:00:00" },
+      { bib: 50, name: "Genevieve", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 23, time: "30:00:00" },
+      { bib: 87, name: "Angelina C", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 22, time: "23:29" },
+      { bib: 27, name: "Will L", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 22, time: "28:27:00" },
+      { bib: 30, name: "Andrew E", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 22, time: "28:52:00" },
+      { bib: 82, name: "Davit G", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 22, time: "30:00:00" },
+      { bib: 103, name: "Mackenzie J", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 22, time: "30:00:00" },
+      { bib: 70, name: "Zavien", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 21, time: "29:57:00" },
+      { bib: 16, name: "Alyssa S", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 21, time: "30:00:00" },
+      { bib: 40, name: "Rae L", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 21, time: "30:00:00" },
+      { bib: 25, name: "Katarina F", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 20, time: "28:37:00" },
+      { bib: 12, name: "William B", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 20, time: "30:00:00" },
+      { bib: 44, name: "Elizabth", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 20, time: "30:00:00" },
+      { bib: 51, name: "James", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 20, time: "30:00:00" },
+      { bib: 55, name: "Aiden", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 20, time: "30:00:00" },
+      { bib: 35, name: "Carlos W", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 19, time: "21:47" },
+      { bib: 80, name: "Fajer L", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 18, time: "14:55" },
+      { bib: 93, name: "Jackson A", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 18, time: "18:25" },
+      { bib: 45, name: "Charlitte", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 18, time: "30:00:00" },
+      { bib: 73, name: "River K", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 18, time: "30:00:00" },
+      { bib: 65, name: "Eve", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 17, time: "30:00:00" },
+      { bib: 69, name: "Zach", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 17, time: "30:00:00" },
+      { bib: 32, name: "Aleck H", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 16, time: "29:06:00" },
+      { bib: 9, name: "Samuel H", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 16, time: "30:00:00" },
+      { bib: 23, name: "Nikolai", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 16, time: "30:00:00" },
+      { bib: 68, name: "Roberta", category: "Intermediate (V4–V6)", location: "Binghamton", routesCompleted: 14, time: "14:57" },
+      { bib: 98, name: "Ian A", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 14, time: "26:50:00" },
+      { bib: 49, name: "Hugo", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 14, time: "30:00:00" },
+      { bib: 108, name: "Andrew", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 14, time: "30:00:00" },
+      { bib: 97, name: "Carla V", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 12, time: "29:47:00" },
+      { bib: 52, name: "Zach", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 12, time: "30:00:00" },
+      { bib: 66, name: "Kaylee", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 12, time: "30:00:00" },
+      { bib: 47, name: "Joshua", category: "Beginner (V0–V3)", location: "Binghamton", routesCompleted: 9, time: "26:59:00" }
+    ];
+
+    const MAX_ROUTES = 30;
 
     const parseTimeToSeconds = (value) => {
       const parts = String(value).split(":").map(Number);
