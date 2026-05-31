@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -780,18 +781,24 @@
 66,Kaylee,Beginner (V0–V3),Binghamton,12,30:00
 47,Joshua,Beginner (V0–V3),Binghamton,9,26:59`;
 
-    const rawParticipants = participantsCsv.trim().split("
-").slice(1).map((line) => {
-      const [bib, name, category, location, routesCompleted, time] = line.split(",");
-      return {
-        bib: Number(bib),
-        name,
-        category,
-        location,
-        routesCompleted: Number(routesCompleted),
-        time
-      };
-    });
+    const rawParticipants = participantsCsv
+      .trim()
+      .split(/
+?
+/)
+      .slice(1)
+      .filter(Boolean)
+      .map((line) => {
+        const [bib, name, category, location, routesCompleted, time] = line.split(",");
+        return {
+          bib: Number(bib),
+          name: name.trim(),
+          category: category.trim(),
+          location: location.trim(),
+          routesCompleted: Number(routesCompleted),
+          time: time.trim()
+        };
+      });
 
     const MAX_ROUTES = 30;
 
